@@ -40,9 +40,6 @@ jobs:
       - name: Display Tag output
         run: echo ${{ steps.meta.outputs.tags }}
 
-      - name: Display Label output
-        run: echo ${{ steps.meta.outputs.labels }}
-
       - name: Build image and push to Docker Hub and GitHub Container Registry
         uses: docker/build-push-action@v2
         with:
