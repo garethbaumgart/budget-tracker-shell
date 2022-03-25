@@ -1,5 +1,21 @@
 # BudgetTrackerShell
 
+This project makes use of @angular-architects/module-federation plugin
+https://www.npmjs.com/package/@angular-architects/module-federation
+
+This is the shell project that wraps two separately hosted projects
+- budget-tracker-income-mfe
+- budget-tracker-expense-mfe
+
+## Using Docker
+Run these two commands to build and then run the docker image (http://localhost:3000/)
+
+```docker build -t bt-shell .```
+
+```docker run -p 3000:80 bt-shell```
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
