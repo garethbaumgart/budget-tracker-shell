@@ -48,7 +48,7 @@ jobs:
             garethbaumgartwex/bt-shell:latest
             ghcr.io/garethbaumgart/bt-shell:latest
           # build on feature branches, push only on main branch
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/*' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
