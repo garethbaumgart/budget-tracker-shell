@@ -44,5 +44,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: budget-tracker/testapp:latest
+          tags: budget-tracker-app:latest
           push: true
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GHCR_PAT }}
