@@ -44,5 +44,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/budget-tracker/testapp:latest
+          tags: budget-tracker/testapp:latest
           push: true
