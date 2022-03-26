@@ -47,5 +47,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: ${{ env.REGISTRY }}/${{ github.actor }}/budget-tracker-app:latest
+          tags: ${{ steps.meta.outputs.tags }}
           push: true
