@@ -49,5 +49,3 @@ jobs:
           context: .
           tags: budget-tracker-app:latest
           push: true
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.GHCR_PAT }}
