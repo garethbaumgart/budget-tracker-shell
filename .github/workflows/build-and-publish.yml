@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  REGISTRY: ghrc.io
+  REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
@@ -17,6 +17,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Display github.actor value
+        run: echo ${{ github.actor }}
+
+      - name: Display env.REGISTRY value
+        run: echo ${{ env.REGISTRY }}
 
       - name: Login to Github Packages
         uses: docker/login-action@v1
