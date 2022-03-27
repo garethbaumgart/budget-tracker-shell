@@ -16,6 +16,15 @@ Run these two commands to build and then run the docker image (http://localhost:
 
 ---
 
+## CI/CD 
+Making use of Github Actions to build, test, publish and deploy the application.
+Docker images are being pushed to the Azure Container Registry. These images are then deployed to an Azure Container Instance (http://budget-tracker-resource-group4.australiaeast.azurecontainer.io/)
+
+Useful documentation used to setup the workflow
+- https://docs.microsoft.com/en-us/azure/container-instances/container-instances-github-action
+
+--- 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
