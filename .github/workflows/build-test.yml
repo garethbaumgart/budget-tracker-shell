@@ -1,0 +1,22 @@
+name: Build and run tests
+on:
+  push:
+    branches: ['release**']
+  pull_request:
+    branches: ['main']
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-test:
+    name: Build and test application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: |
+          docker build . -t budget-tracker-shell-app:${{ github.run_id }}
