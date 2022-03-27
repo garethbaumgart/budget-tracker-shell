@@ -2,7 +2,7 @@ name: Build, Publish and Deploy
 
 on:
   pull_request:
-    types: [closed]
+    types: [merged]
     branches: [main]
 
 jobs:
